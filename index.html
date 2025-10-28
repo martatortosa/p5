@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Circus!!</title>
+    <style>
+       *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+      body {
+      background-color: #f5f5f5;
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      }
+      /* .poster {
+      position: relative;
+      width: 80vw;
+      height: 80vh;
+      border: 8px dotted #2a4bd7;
+      padding: 40px;
+      box-sizing: border-box;
+      color: #000;
+    } */
+     .poster {
+     position: relative;
+     width: 80vw;
+     height: 80vh;
+     padding: 40px;
+     box-sizing: border-box;
+     color: #000;
+     background-color: #f5f5f5;
+
+     border: none;
+
+     background-image:
+     repeating-linear-gradient(90deg, #2a4bd7 0 4px, transparent 4px 8px),
+     repeating-linear-gradient(180deg, #2a4bd7 0 4px, transparent 4px 8px),
+     repeating-linear-gradient(270deg, #2a4bd7 0 4px, transparent 4px 8px),
+     repeating-linear-gradient(0deg, #2a4bd7 0 4px, transparent 4px 8px);
+     background-repeat: no-repeat;
+     background-size: 100% 8px, 8px 100%, 100% 8px, 8px 100%;
+     background-position: top, right, bottom, left;
+
+     animation: borderMove 1s linear infinite;
+}
+
+
+@keyframes borderMove {
+  0% {
+    background-position: 0 0, right 0, 0 100%, left 0;
+  }
+  100% {
+    background-position: -8px 0, right -8px, -8px 100%, left -8px;
+  }
+}
+    .text {
+    position: absolute;
+    white-space: pre;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: default;
+    }
+
+    .text:hover {
+    transform: scale(1.1);
+    color: orange;
+    }
+    .circus { 
+    top: 5%;
+    left: 30%;
+    font-weight: bold;
+    color: #1e4dd4;}
+    .circus {
+    font-size: 40px; 
+    transition: all 0.5s
+   }
+
+    .circus:hover {
+    font-size: 80px; 
+    }
+    .circus:hover :before{
+    opacity: 100%;
+    content: smack;
+   }
+    .left { 
+    bottom: 10%; 
+    left: 10%; 
+    color: #1e4dd4; 
+    display: inline-block;
+    transition: transform 0.3s ease;
+    }
+    .left:hover{
+    transform: translateX(-80px);
+    }
+    .right { 
+    top: 15%;
+    right: 10%;
+    color: #c92a2a;
+    display: inline-block;
+    transition: transform 0.3s ease; 
+    }
+    .right:hover{
+    transform: translateX(80px);
+    }
+    .hoop {
+      bottom:12%;
+      right: 14%;
+      height: 120px;
+      margin: auto;
+      font-size: 1.5em;
+      color: #1e4dd4;
+      border: 4px solid black;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 1s ease, border-color 1s ease;
+    }
+
+    .hoop:hover {
+    transform: rotate(360deg) scale(1.2);
+    border-color: orange;
+    }
+  h2{
+   top: 0;
+   font-size: 3rem;
+   width: 5%;
+   padding-bottom: 0;
+   margin: auto;
+   text-align: center;
+  transition: transform 0.3s ease;
+  }
+  h2:hover{
+    transform: translateY(10px);
+  }
+
+    </style>
+</head>
+<body>
+    <div class="poster">
+   <div class="text red right"> on the right, a red blinker</div>
+   <div class="circus"> le circus!!</div>
+   <div class="text blue left"> on the left, a green blinker</div>
+    <div class="hoop">hoop</div>
+   <div id="grupo">
+    <h2>smack</h2>
+    <h2>K47</h2>
+    <h2>and crew</h2>
+    <h2>also</h2>
+    <h2>corks</h2>
+    <h2>nets</h2>
+   </div>
+</body>
+</html>
